@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الاستشارات والبيع</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .products, .services {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .product, .service {
+            background-color: white;
+            padding: 15px;
+            width: 30%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .social-icons img {
+            width: 40px;
+            margin: 0 10px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>موقع الاستشارات والبيع</h1>
+        <p>استشارات عبر الإنترنت وشراء منتجات طبيعية</p>
+    </header>
+
+    <div class="container">
+        <!-- عرض المنتجات -->
+        <section class="products">
+            <div class="product">
+                <h3>منتج 1</h3>
+                <p>منتج عشبي طبيعي يساعد في علاج العديد من المشاكل الصحية.</p>
+                <button class="btn">اشترِ الآن</button>
+            </div>
+            <div class="product">
+                <h3>منتج 2</h3>
+                <p>منتج آخر يعزز صحة الجسم بشكل طبيعي وآمن.</p>
+                <button class="btn">اشترِ الآن</button>
+            </div>
+            <div class="product">
+                <h3>منتج 3</h3>
+                <p>منتج مميز يعزز الطاقة والنشاط.</p>
+                <button class="btn">اشترِ الآن</button>
+            </div>
+        </section>
+
+        <!-- حجز المواعيد -->
+        <section class="services">
+            <div class="service">
+                <h3>استشارة عبر الإنترنت</h3>
+                <p>احصل على استشارة متخصصة من خبراء الأعشاب والرقية الشرعية.</p>
+                <button class="btn">احجز الآن</button>
+            </div>
+            <div class="service">
+                <h3>دورة تدريبية</h3>
+                <p>تعلم كيفية استخدام الأعشاب في العلاج والوقاية.</p>
+                <button class="btn">احجز الآن</button>
+            </div>
+            <div class="service">
+                <h3>استشارة خاصة</h3>
+                <p>استشارة خاصة ومباشرة مع معالج الأعشاب.</p>
+                <button class="btn">احجز الآن</button>
+            </div>
+        </section>
+
+        <!-- خيارات الدفع -->
+        <section class="payment-options">
+            <h2>اختيارات الدفع</h2>
+            <p>اختر طريقة الدفع المفضلة لديك لإتمام عملية الشراء أو حجز الاستشارة.</p>
+            <button class="btn">الدفع عبر بطاقة ائتمان</button>
+            <button class="btn">الدفع عبر باي بال</button>
+        </section>
+
+        <!-- تواصل عبر وسائل التواصل الاجتماعي -->
+        <section class="social">
+            <h2>تابعنا على وسائل التواصل الاجتماعي</h2>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+                <a href="https://twitter.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_logo_2012.svg" alt="Twitter"></a>
+                <a href="https://instagram.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>تاريخ الحجز: <span id="booking-date">لم يتم الحجز بعد</span></p>
+        <p>&copy; 2025 جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+        // قم بتحديث تاريخ الحجز عند الضغط على زر الحجز
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const currentDate = new Date().toLocaleDateString();
+                document.getElementById('booking-date').textContent = currentDate;
+            });
+        });
+    </script>
+</body>
+</html>
